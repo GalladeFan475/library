@@ -1,0 +1,208 @@
+:root {
+  --text-color: black;
+  --background-color: white;
+  --new-btn-hover-color: rgb(247, 235, 235);
+  --del-btn-hover-color: rgb(48, 47, 47);
+  --background-container: url("images/light-mode-library.jpg");
+  --background-header: url("images/light-mode-header.jpg");
+  --message-background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.header {
+  border-bottom: 5px solid black;
+  background-image: var(--background-header);
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.header h1 {
+  margin-block: 0;
+  align-self: center;
+  font-weight: bold;
+  color: white;
+}
+
+.color-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 2px 2px 4px grey;
+}
+
+.color-btn:hover {
+  background-color: var(--new-btn-hover-color);
+}
+
+.color-btn:active {
+  box-shadow: none;
+}
+
+.book-new-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 2px 2px 4px grey;
+}
+
+.book-new-btn:hover {
+  background-color: var(--new-btn-hover-color);
+}
+
+.book-new-btn:active {
+  box-shadow: none;
+}
+
+.library {
+  grid-row: 2/3;
+  background-image: var(--background-container);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  margin-top: 20px;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.empty-message {
+  border-radius: 20px;
+  font-size: 50px;
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--message-background-color);
+  width: 40vw;
+  text-align: center;
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+}
+
+.book-card {
+  border: 5px solid var(--text-color);
+  padding: 20px;
+  border-radius: 30px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  align-self: start;
+}
+
+dialog {
+  padding: 5rem 7rem;
+  border-radius: 30px;
+  border: 5px solid var(--text-color);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.book-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.book-btn button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.book-read-btn,
+.book-unread-btn {
+  transition: background-color 0.2s;
+  color: var(--background-color);
+}
+
+.book-read-btn {
+  background-color: green;
+}
+
+.book-read-btn:hover {
+  background-color: rgb(17, 158, 17);
+}
+
+.book-read-btn:active {
+  box-shadow: none;
+}
+
+.book-unread-btn {
+  background-color: red;
+}
+
+.book-unread-btn:hover {
+  background-color: rgb(242, 70, 70);
+}
+
+.book-unread-btn:active {
+  box-shadow: none;
+}
+
+.book-delete-btn {
+  color: var(--background-color);
+  background-color: var(--text-color);
+}
+
+.book-delete-btn:hover {
+  background-color: var(--del-btn-hover-color);
+}
+
+.book-delete-btn:active {
+  box-shadow: none;
+}
+
+.footer {
+  padding: 20px;
+  border-top: solid 5px black;
+  background-image: var(--background-header);
+}
