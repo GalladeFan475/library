@@ -3,8 +3,8 @@
   --background-color: white;
   --new-btn-hover-color: rgb(247, 235, 235);
   --del-btn-hover-color: rgb(48, 47, 47);
-  --background-container: url("images/light-mode-library.jpg");
-  --background-header: url("images/light-mode-header.jpg");
+  --background-container: url("light-mode-library.jpg");
+  --background-header: url("light-mode-header.jpg");
   --message-background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -206,3 +206,4 @@ form {
   border-top: solid 5px black;
   background-image: var(--background-header);
 }
+
